@@ -190,3 +190,14 @@ python scripts/feats_to_dtw_return.py \
     --top_n 10 \
     --certainty 0.9
 ```
+
+## 4. DTW search with TTS queries (Gronings (gos-kdl) only)
+
+Make sure to download the set up the gos-kdl dataset locally, as we use those references with the TTS-generated queries.
+
+```
+# If you're not already inside the 'dev' container:
+# docker-compose run --rm dev
+
+bash run-tts-qbe-std.sh
+```
