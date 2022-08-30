@@ -193,7 +193,7 @@ python scripts/feats_to_dtw_return.py \
 
 ## 4. DTW search with TTS queries (Gronings (gos-kdl) only)
 
-Make sure to download the set up the gos-kdl dataset locally, as we use those references with the TTS-generated queries.
+Make sure to set up the gos-kdl dataset locally, as we use those references with the TTS-generated queries.
 
 ```
 # If you're not already inside the 'dev' container:
