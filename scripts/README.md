@@ -16,15 +16,6 @@ gos-kdl/
 ...
 ```
 
-For every pairing of a .wav file in `queries/` with a .wav file in `references/`, the `labels.csv` file contains the ground truth of whether the given query occurs in the reference. We expect the wav files to be 16 kHz mono 16-bit WAV PCM.
-
-| query |        reference      | label |
-|-------|-----------------------|-------|
-| ED_aapmoal | OV-aapmoal-verschillend-mor-<b>aapmoal</b>-prachteg-van-kleur |   1   |
-| ED_aapmoal | RB-de-gruinteboer-staait-mit-n-blaauw-schoet-veur-achter-de-teunbaank        |   0   |
-|  ED_achter  | OV-aapmoal-verschillend-mor-aapmoal-prachteg-van-kleur |   0   |
-|  ED_achter  | RB-de-gruinteboer-staait-mit-n-blaauw-schoet-veur-<b>achter</b>-de-teunbaank        |   1   |
-
 ## System requirements
 
 The instructions here are working as of 2021-03-24, tested on a virtual instance with 24 CPU cores and 64 GB of RAM running Ubuntu 20.04 LTS, Docker Engine 20.10.5, and Docker Compose 1.28.4. See [Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/) or [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/) if you're on one of these platforms. The Docker images have all required interpreters and package dependencies pre-installed (Python, NumPy; R, dplyr; Perl, etc.), so if you choose not to use them, you may need to spend some time configuring your local environment to work with these scripts (e.g. STDEval requires Perl no newer than 5.18.4, and the Python scripts require at least Pandas 1.2.1; see `requirements.txt` and `scripts/Docker/Dockerfile`).

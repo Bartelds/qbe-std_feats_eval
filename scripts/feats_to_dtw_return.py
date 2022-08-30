@@ -137,9 +137,9 @@ for dataset in datasets:
         # return the top_n matches per query
         for query, references in labels_df.groupby("query"):
             references = references.sort_values(by=["prediction"], ascending=False)
-            references = references[references["prediction"] >= args.certainty]
-            scores = references[:args.top_n]["prediction"].to_list()
-            references = references[:args.top_n]["reference"].to_list()
+            references = references[references["prediction"] >= float(args.certainty)]
+            scores = references[:int(args.top_n)]["prediction"].to_list()
+            references = references[:int(args.top_n)]["reference"].to_list()
 
             print(f"Top hits found for {query} are:")
             if len(references) > 0:
